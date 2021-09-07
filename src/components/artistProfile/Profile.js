@@ -8,7 +8,7 @@ import CardSection from "./section/stack/section/CardSection";
 export default function Profile() {
   const { profile } = useParams();
   const {action} = useParams();
-  console.log(action)
+  // console.log(action)
   const songTrack = [
     {index:0, title:'Dreaming',files:'/song/music.mp3'},
     {index:1, title:'Love Of A Lifetime',files:'/song/music.mp3'},
@@ -52,11 +52,10 @@ export default function Profile() {
         <Header user={profile} intro={musicIntro} handleNext={handleNext} handlePrevious={handlePrevious} action={action}/>
         
       </div>
-      <div className={(action === 'edit' ? 'w-full md:w-10/12': 'w-full md:w-1/2')+" px-8 md:px-0 flex flex-col md:flex-row body mx-auto py-12 space-x-0 space-y-4 md:space-y-0 md:space-x-8"}>
+      <div className={(action === 'edit' ? 'w-full md:w-10/12': 'w-full md:w-4/6 xl:w-6/12')+" px-8 md:px-0 flex flex-col md:flex-row body mx-auto py-16 space-x-0 space-y-16 md:space-y-0 md:space-x-8"}>
         {action === 'edit' ? <Upload/> : false }
         {action === 'profile' ? <CardSection/> : false}
         <SongTrack track={songTrack} user={profile} thumbnail={musicIntro.profile} changeHandler={changeMusic} action={action}/>
-        
       </div>
     </div>
   );

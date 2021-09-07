@@ -15,8 +15,8 @@ export default function songTrack(props) {
   return (
     <div
       className={
-        (props.action === "profile" ? "w-full shadow-box p-4" : "w-1/4") +
-        " songtrack flex flex-col items-cente space-y-4 "
+        (props.action === "profile" ? "w-full shadow-box p-4" : "w-full md:w-1/4") +
+        " songtrack flex flex-col items-cente space-y-4 mt-8 md:mt-0"
       }
     >
       <div className="title flex flex-row text-gray-600  space-x-2 w-full">
@@ -29,18 +29,18 @@ export default function songTrack(props) {
         {props.track.map((item, index) => {
           return (
             <button
-              className="flex flex-row track-item md:space-x-4 items-center md:pr-4 hover:bg-gray-300 hover:bg-opacity-50"
+              className="grid grid-cols-2 md:grid-cols-3 track-item md:space-x-4 items-center md:pr-4 hover:bg-gray-300 hover:bg-opacity-50"
               key={index}
               onClick={() => props.changeHandler(index)}
             >
-              <div className="thumbnail flex-grow-1 w-1/2 md:w-auto md:flex-grow-0">
+              <div className="thumbnail flex-grow-1 w-1/2 md:w-auto">
                 <LazyLoadImage
                   src={props.thumbnail}
-                  className="w-24"
+                  className="w-24 md:mx-auto"
                   alt={props.user}
                 />
               </div>
-              <div className="song flex-grow-1 flex-col text-left w-1/2 md:w-auto">
+              <div className="song flex-grow-1 flex-col text-left md:w-auto">
                 <div className="user capitalize">{props.user}</div>
                 <span className="title calitapize text-black text-md">
                   {item.title}

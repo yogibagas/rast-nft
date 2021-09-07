@@ -188,6 +188,11 @@ export default {
           { label: "Mr. Rasta", path: "/farms/mr-rasta" },
           { label: "Mrs. Rasta", path: "/farms/mrs-rasta" },
         ],
+      },{
+        title: "Artist Login",
+        item: [
+          { label: "Login", path: "/login" },
+        ],
       },
     ],
     copyRight: parse(

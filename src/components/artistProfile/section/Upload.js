@@ -50,7 +50,7 @@ export default function Upload() {
   };
 
   return (
-    <div className="upload flex w-8/12 h-64 flex-col">
+    <div className="upload flex w-full md:w-8/12 h-64 flex-col">
       <AudioUploader />
     </div>
   );

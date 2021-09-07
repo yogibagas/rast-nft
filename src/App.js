@@ -8,6 +8,7 @@ import ArtistProfile from "./components/artistProfile/Profile"
 import 'react-dropzone-uploader/dist/styles.css'
 import DetailSong from './components/detailSong/DetailSong'
 import ArtistLaunchpad from "./components/artistsLaunchpad/ArtistLaunchpad"
+import Login from "./components/login/Login"
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <div className="bg-white font-roboto h-screen text-black">
       <Header />
       <Switch>
+        <Route exact path="/login" component={Login}></Route>
         <Route exact path="/" component={Home}></Route>
         <Route exact path="/launchpad-artists" component={ArtistLaunchpad}/>
         <Route path="/user/:profile/:action" component={ArtistProfile}/>

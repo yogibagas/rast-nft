@@ -14,7 +14,7 @@ export default function Body(props) {
 from creative musicians around the world</p>
           </div>
         </div>
-        <div className="body grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div className="body grid grid-cols-1 md:grid-cols-1 gap-3">
           <SlickSlide items ={launchpadArtistItems}/>
         </div>
       </div>

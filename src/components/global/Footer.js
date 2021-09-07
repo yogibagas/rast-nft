@@ -42,6 +42,7 @@ export default function Footer() {
               </div>
             );
           })}
+          
         </div>
 
         <div className="bottom-footer flex space-between pl-6 md:pl-0 pr-6 md:pr-0 flex-col md:flex-row w-full space-between mx-auto">
