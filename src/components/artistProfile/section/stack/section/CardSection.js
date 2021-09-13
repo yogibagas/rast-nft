@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import RastaInfo from "./CardElements/RastaInfo";
 import FarmHarvest from "./CardElements/FarmHarvest";
 import Wallet from "./CardElements/Wallet";
 import FooterCardFarms from "./CardElements/FooterCardFarms";
 import BinanceLogo from "../../../../../assets/Binance-Icon-Logo.svg";
+import DataBank from "../../../../DataBank";
 
 export default function CardSection() {
   const item = {
@@ -22,6 +23,13 @@ export default function CardSection() {
       bscLink: "/",
     },
   };
+  const initialWallet = DataBank.walletConnected
+  const [walletStatus, setWalletStatus] = useState(initialWallet)
+  
+  const changeWallet = (val) => {
+    setWalletStatus(val);
+}
+
   return (
     <div className="wrapper w-full flex flex-col items-center">
       <div className="flex flex-col mx-2 w-full">
@@ -37,13 +45,17 @@ export default function CardSection() {
               farmEarned={item.detail.rastaEarned}
               depositFee={item.detail.depositFee}
               harvestLink={item.detail.harvestLink}
+              walletStatus={walletStatus}
+              handleWallet={changeWallet}
             />
-            <Wallet farmWalletLink={item.detail.unlockWalletLink} />
+            <Wallet farmWalletLink={item.detail.unlockWalletLink}   />
             <FooterCardFarms
               farmStake={item.detail.stake}
               farmName={item.name}
               farmValue={item.detail.value}
               farmBscLink={item.detail.bscLink}
+              walletStatus={walletStatus}
+              handleWallet={changeWallet}
             />
           </div>
         </div>

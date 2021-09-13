@@ -54,7 +54,7 @@ export default function DetailSong() {
       <ShopSong song={song} />
       <ProfileTab user={user} song={song}/>
       <TradingHistory user={user} />
-      <SupportArtist/>
+      <SupportArtist user={user}/>
       <MoreArtist items={data} />
       <LaunchpadArtist items={data} />
     </div>

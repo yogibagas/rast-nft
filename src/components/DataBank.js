@@ -56,6 +56,10 @@ export default {
       link: "#",
     },
   ],
+  walletConnected : {
+    status:false,
+    walletDetails:false,
+  },
   navbar: {
     logo: Logo,
     menu: [
