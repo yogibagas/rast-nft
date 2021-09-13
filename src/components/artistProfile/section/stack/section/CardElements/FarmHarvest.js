@@ -2,7 +2,6 @@ import React from "react";
 import * as FaIcons from "react-icons/fa";
 
 export default function FarmHarvest(props) {
-  console.log(props);
   return (
     <div>
       <div className="row flex flex-col md:flex-row gap-12 w-full border-b-2 border-black pb-12 mb-6">

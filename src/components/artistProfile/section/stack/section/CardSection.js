@@ -23,17 +23,17 @@ export default function CardSection() {
       bscLink: "/",
     },
   };
-  const initialWallet = DataBank.walletConnected
+  const initialWallet = DataBank.walletConnected.status
   const [walletStatus, setWalletStatus] = useState(initialWallet)
   
-  const changeWallet = (val) => {
-    setWalletStatus(val);
-}
+  function changeWallet(){
+    setWalletStatus(!walletStatus);
+  }
 
   return (
     <div className="wrapper w-full flex flex-col items-center">
       <div className="flex flex-col mx-2 w-full">
-        <div className="shadow-md p-2 md:p-8">
+        <div className="border-2 border-green-rasta rounded-md p-2 md:p-8">
           <RastaInfo
             farmName={item.name}
             farmLeverage={item.detail.multiple}
@@ -48,14 +48,15 @@ export default function CardSection() {
               walletStatus={walletStatus}
               handleWallet={changeWallet}
             />
-            <Wallet farmWalletLink={item.detail.unlockWalletLink}   />
+            <Wallet farmWalletLink={item.detail.unlockWalletLink}  
+              walletStatus={walletStatus}
+              handleWallet={changeWallet} />
             <FooterCardFarms
               farmStake={item.detail.stake}
               farmName={item.name}
               farmValue={item.detail.value}
               farmBscLink={item.detail.bscLink}
               walletStatus={walletStatus}
-              handleWallet={changeWallet}
             />
           </div>
         </div>
