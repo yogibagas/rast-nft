@@ -58,7 +58,7 @@ export default function Header(props) {
               </button>
             </div>
             <div className="play flex-grow-1 text-center">
-              <Player url={props.intro.music.files} />
+              <Player url={props.intro.music.files} action={'play'}/>
             </div>
             <div className="next flex-grow-1 text-white text-center">
               <button onClick={props.handleNext}>

@@ -36,7 +36,7 @@ export default function Profile() {
     var getCurrentMusic = currentMusic;
     var max = songTrack.length;
 
-    const counter = getCurrentMusic.index == max ? getCurrentMusic.index : (getCurrentMusic.index+1)
+    const counter = getCurrentMusic.index+1 == max ? getCurrentMusic.index : (getCurrentMusic.index+1)
     setCurrentMusic(songTrack[counter])
   }
   const handlePrevious = () => {
