@@ -6,6 +6,7 @@ import Player from "./Player";
 import * as FaIcons from "react-icons/fa";
 
 export default function Header(props) {
+  
   const [showModal, setShowModal] = useState(false);
   const [image, setImage] = useState({ preview: "", raw: "" });
 
@@ -51,21 +52,7 @@ export default function Header(props) {
           />
         </div>
         <div className="music-play flex flex-col space-y-2 flex-grow-1 md:px-8">
-          <div className="button flex flex-row text-5xl justify-content-between flex-grow-1 w-full">
-            <div className="prev flex-grow-1 text-center">
-              <button onClick={props.handlePrevious}>
-                <MdIcons.MdSkipPrevious className="stroke-current text-white" />
-              </button>
-            </div>
-            <div className="play flex-grow-1 text-center">
-              <Player url={props.intro.music.files} action={'play'}/>
-            </div>
-            <div className="next flex-grow-1 text-white text-center">
-              <button onClick={props.handleNext}>
-                <MdIcons.MdSkipNext className="stroke-current text-white" />
-              </button>
-            </div>
-          </div>
+              <Player song={props.intro.music} handleNext={props.handleNext} handlePrevious={props.handlePrevious} isPlay={props.isPlay} setPlay={props.setPlay}/>
           <div className="title flex flex-grow-1">
             <h1 className="text-2xl text-center md:text-left md:text-4xl font-bold text-yellow-rasta capitalize">
               {props.user} - {props.intro.music.title}
