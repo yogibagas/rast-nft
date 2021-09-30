@@ -52,7 +52,7 @@ export default function Header(props) {
           />
         </div>
         <div className="music-play flex flex-col space-y-2 flex-grow-1 md:px-8">
-              <Player song={props.intro.music} handleNext={props.handleNext} handlePrevious={props.handlePrevious} isPlay={props.isPlay} setPlay={props.setPlay}/>
+              <Player playing={props.playing} toggle={props.toggle} useAudio={props.useAudio} song={props.intro.music} handleNext={props.handleNext} handlePrevious={props.handlePrevious} isPlay={props.isPlay} setPlay={props.setPlay}/>
           <div className="title flex flex-grow-1">
             <h1 className="text-2xl text-center md:text-left md:text-4xl font-bold text-yellow-rasta capitalize">
               {props.user} - {props.intro.music.title}

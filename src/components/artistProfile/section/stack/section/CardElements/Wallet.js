@@ -93,9 +93,9 @@ export default function Wallet(props) {
                     <button type="button" className="text-right mt-4 mr-2" onClick={ maxHandle }>
                       <span className="bg-green-rasta text-white px-2 py-2 rounded-md">Max</span>
                       </button>
-                      <div className="flex">
-                        <button type="button" className="cancel__btn bg-yellow-rasta border-green-rasta">Confirm</button>
-                        <button type="button" className="cancel__btn bg-white border-2 border-green-rasta">Cancel</button>
+                      <div className="flex space-x-0 space-y-2 md:space-y-0 md:space-x-4">
+                        <button type="button" className="cancel__btn bg-yellow-rasta border-green-rasta px-8 py-2">Confirm</button>
+                        <button type="button" className="cancel__btn bg-white border-2 border-green-rasta  px-8 py-2" onClick={() => setShowDepositModal(false)}>Cancel</button>
                       </div>
                   </form>
                 </div>
@@ -137,7 +137,7 @@ export default function Wallet(props) {
                           onClick={() => handleConnectWallet()}
                         >
                           <span>
-                            <img src={item.icon.type}></img>
+                            <img src={item.icon.type} alt={item.name}/>
                           </span>
                           <span className="text-center">{item.name}</span>
                         </button>
