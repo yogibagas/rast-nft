@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Sidebar from "../global/Sidebar";
 import DataBank from "../DataBank";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import * as FaIcons from "react-icons/fa";
+// import * as FaIcons from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function Header() {
@@ -66,7 +66,7 @@ export default function Header() {
                   <div className="grid grid-cols-2 md:grid-cols-3 mx-auto gap-4">
                     {DataBank.wallet.map((item, index) => {
                       return (<Link className="wallet-wrap flex flex-col space-y-3 bg-gray-white shadow-box px-2 py-4 rounded-xl items-center" to={item.link} key={index}>
-                        <span><img src={item.icon.type}></img></span>
+                        <span><img src={item.icon.type} alt="no data"></img></span>
                         <span className="text-center">{item.name}</span>
                       </Link>)
                     })}

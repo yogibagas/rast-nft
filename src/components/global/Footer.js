@@ -1,8 +1,8 @@
 import React from "react";
 import DataBank from "../DataBank";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+// import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
-import { BrowserRouter as Router } from "react-router-dom";
+// import { BrowserRouter as Router } from "react-router-dom";
 
 export default function Footer() {
   function ShowLinks(props) {

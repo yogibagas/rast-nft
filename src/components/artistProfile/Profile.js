@@ -50,7 +50,7 @@ export default function Profile() {
         audio.pause();
         audio.currentTime = 0;
       }
-    }, [playing]);
+    }, [playing, audio]);
 
     useEffect(() => {
       audio.addEventListener("ended", () => setPlaying(false));
@@ -58,9 +58,9 @@ export default function Profile() {
       return () => {
         audio.removeEventListener("ended", () => setPlaying(false));
       };
-    }, []);
+    }, [audio]);
 
-    return [playing, toggle];
+    return [playing, toggle, audio];
   };
 
   const [playing, toggle] = useAudio(currentMusic.files);

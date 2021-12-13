@@ -1,7 +1,7 @@
 import React from "react";
 import "react-dropzone-uploader/dist/styles.css";
 import Dropzone from "react-dropzone-uploader";
-import * as FaIcons from "react-icons/fa";
+// import * as FaIcons from "react-icons/fa";
 
 export default function Upload() {
   const AudioUploader = () => {
@@ -16,10 +16,10 @@ export default function Upload() {
         const url = 'https://httpbin.org/post'
     return { url, meta: { fileUrl: `${url}/${encodeURIComponent(meta.name)}` } }
       }
-      const handleSubmit = (files, allFiles) => {
-        console.log(files.map(f => f.meta))
-        allFiles.forEach(f => f.remove())
-      }
+      // const handleSubmit = (files, allFiles) => {
+      //   console.log(files.map(f => f.meta))
+      //   allFiles.forEach(f => f.remove())
+      // }
       const handleChangeStatus = ({ meta, remove }, status) => {
         if (status === 'headers_received') {
           toast(`${meta.name} successfully!`)

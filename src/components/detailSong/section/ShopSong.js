@@ -14,7 +14,7 @@ export default function ShopSong(props) {
                     {props.song.title}
                 </div>
                 <div className="price flex flex-row items-center">
-                    <span className="icon"><img src={BNBRastaIcon} className="w-12"/></span>
+                    <span className="icon"><img src={BNBRastaIcon} className="w-12" alt="no data"/></span>
                     <div className="price text-3xl">{props.song.price}</div>
                 </div>
                 <BuyNow/>

@@ -37,7 +37,7 @@ export default function TradeHistory(props) {
                     </span>
                     <span className="item price  flex flex-row items-center space-x-2">
                       <span>{item.price} </span>
-                      <img src={BNBRastaIcon} className={"w-8"} />
+                      <img src={BNBRastaIcon} className={"w-8"} alt="no data" />
                     </span>
                     <span className="item date  flex flex-row items-center">
                       {item.date}

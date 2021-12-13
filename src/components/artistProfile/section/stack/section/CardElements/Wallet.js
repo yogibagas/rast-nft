@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import * as FaIcons from "react-icons/fa";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import DataBank from "../../../../../DataBank";
 
 export default function Wallet(props) {

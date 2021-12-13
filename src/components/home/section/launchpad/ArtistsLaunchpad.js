@@ -1,6 +1,6 @@
 import React from 'react'
 import * as FaIcons from "react-icons/fa";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+// import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from "react-router-dom";
 import ArtistsSlick from "./SlickSlide/ArtistsSlick"
 

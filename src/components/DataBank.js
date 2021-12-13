@@ -1,29 +1,29 @@
 import * as FaIcons from "react-icons/fa";
-import * as RiIcons from "react-icons/ri";
-import * as IoIcons from "react-icons/io";
 import * as Io5Icons from "react-icons/io5";
-import * as AiIcons from "react-icons/ai";
-import * as GiIcons from "react-icons/gi";
 import Logo from "../assets/NFTRASTA.png";
-import HeroImage from "../assets/lion-coin.png";
-import CommunityImage from "../assets/community-lion.png";
 import parse from "html-react-parser";
-import MrRastaImage from "../assets/lion-mr-rasta.jpg";
-import MrsRastaImage from "../assets/lion-mrs-rasta.jpg";
-import BinanceLogo from "../assets/Binance-Icon-Logo.svg";
-import AboutHeader from "../assets/aboutHero.jpg";
-import BurdyProfile from "../assets/senor-burdy.png";
-import EvoProfile from "../assets/senor-evo.png";
 import BinanceWallet from "../assets/wallet/binance-wallet.png";
 import MathWallet from "../assets/wallet/math-wallet.png";
 import MetaMask from "../assets/wallet/meta-mask.png";
 import TokenPocket from "../assets/wallet/token-pocket.png";
 import TrustWallet from "../assets/wallet/trust-wallet.png";
 import WalletConnect from "../assets/wallet/wallet-connect.png";
-import ComingSoonImage from "../assets/coming-soon-image.png";
 import NftComingSoonImage from "../assets/nft-coming-soon.png";
+// import * as RiIcons from "react-icons/ri";
+// import * as IoIcons from "react-icons/io";
+// import * as AiIcons from "react-icons/ai";
+// import * as GiIcons from "react-icons/gi";
+// import HeroImage from "../assets/lion-coin.png";
+// import CommunityImage from "../assets/community-lion.png";
+// import MrRastaImage from "../assets/lion-mr-rasta.jpg";
+// import MrsRastaImage from "../assets/lion-mrs-rasta.jpg";
+// import BinanceLogo from "../assets/Binance-Icon-Logo.svg";
+// import AboutHeader from "../assets/aboutHero.jpg";
+// import BurdyProfile from "../assets/senor-burdy.png";
+// import EvoProfile from "../assets/senor-evo.png";
+// import ComingSoonImage from "../assets/coming-soon-image.png";
 
-export default {
+const DataBank = {
   wallet: [
     {
       name: "Metamask",
@@ -213,3 +213,5 @@ export default {
     { name: "Youtube", icon: <FaIcons.FaYoutube />, link: "#" },
   ]
 }
+
+export default DataBank;

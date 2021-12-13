@@ -3,7 +3,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import Slider from "react-slick";
 
 import { Link } from "react-router-dom";
-import * as FaIcons from "react-icons/fa"
+// import * as FaIcons from "react-icons/fa"
 
 export default class MultipleSlick extends Component {
   constructor(props) {

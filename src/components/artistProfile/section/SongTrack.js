@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React from "react";
 import * as RiIcons from "react-icons/ri";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
